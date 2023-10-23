@@ -1,0 +1,90 @@
+{
+  "name": "seatom-server",
+  "version": "1.0.0",
+  "description": "rest service",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "alasql": "^2.1.6",
+    "arg": "^5.0.0",
+    "atob": "^2.1.2",
+    "base-64": "^1.0.0",
+    "btoa": "^1.2.1",
+    "compressing": "^1.5.1",
+    "connect-history-api-fallback": "^1.6.0",
+    "crypto": "^1.0.1",
+    "crypto-js": "^4.1.1",
+    "csvtojson": "^2.0.10",
+    "egg": "^2.29.3",
+    "egg-cors": "^2.2.3",
+    "egg-jwt": "^3.1.7",
+    "egg-mongoose": "^3.3.1",
+    "egg-redis": "^2.4.0",
+    "egg-scripts": "^2.11.0",
+    "egg-socket.io": "^4.1.6",
+    "egg-swagger-doc": "^2.3.2",
+    "egg-validate": "^2.0.2",
+    "fs-extra": "^10.0.0",
+    "gm-crypto": "^0.1.8",
+    "html-to-md": "^0.5.8",
+    "iconv-lite": "^0.6.3",
+    "javascript-obfuscator": "^2.19.0",
+    "jschardet": "^3.0.0",
+    "koa-compress": "^5.0.1",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "moment": "^2.29.1",
+    "mongodb": "^4.1.0",
+    "mongoose-increment": "^2.0.0",
+    "mysql": "^2.18.1",
+    "node-xlsx": "^0.21.0",
+    "pg": "^8.6.0",
+    "sm-crypto": "^0.2.7",
+    "stream-wormhole": "^1.1.0",
+    "svg-sprite": "^2.0.1",
+    "svgo": "^3.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "egg-bin": "^4.15.0",
+    "egg-ci": "^1.11.0",
+    "egg-mock": "^3.21.0",
+    "eslint": "^5.13.0",
+    "eslint-config-egg": "^7.1.0"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "EGG_SERVER_ENV=dev egg-scripts start --daemon --title=egg-server-seatom-server",
+    "stop": "EGG_SERVER_ENV=dev egg-scripts stop --title=egg-server-seatom-server",
+    "start-win": "egg-scripts start --env=win --title=egg-server-seatom-server-win --sticky",
+    "stop-win": "egg-scripts stop  --env=win  --title=egg-server-seatom-server-win",
+    "restart-prod": "sh ./shell/restart-prod.sh",
+    "dev": "egg-scripts start --env=local --title=egg-server-seatom-server-win --sticky",
+    "debug": "EGG_SERVER_ENV=local sudo egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "set-config": "node set-config.js",
+    "set-config-nginx": "node set-config-nginx.js",
+    "ugl": "javascript-obfuscator  ./app --output ./app --exclude node_modules",
+    "oracle": "npm install ./oracledb-src-5.2.0.tgz"
+  },
+  "ci": {
+    "version": "10"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "linghuam",
+  "license": "MIT"
+}

@@ -18,6 +18,8 @@ class userController extends Controller {
   async create() {
     const { ctx, config } = this
     const body = ctx.request.body
+    ctx.body = getResponseBody("dsadasd")
+    return
     const data = await ctx.service.user.create(body)
     ctx.body = getResponseBody(data)
   }

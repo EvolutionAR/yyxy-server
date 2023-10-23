@@ -55,6 +55,7 @@ module.exports = appInfo => {
     domainWhiteList: [
       'http://127.0.0.1',
       'http://0.0.0.0:9999',
+      'http://localhost:8088',
       'http://127.0.0.1:3005',
       'http://127.0.0.1:10010',
       'https://fuxi.haizhi.com',

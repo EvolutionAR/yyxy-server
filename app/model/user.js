@@ -5,9 +5,11 @@ module.exports = app => {
   const { randomId } = require('../extend/utils')
   const UserSchema = new Schema(
     {
-      studentId: { type: Number, default: () => randomId() }, // 学号
+      id: { type: Number, default: () => randomId() }, // 学号
+      studentId: { type: String}, // 学号
       name: { type: String, default: '' }, // 名字
-      ageGroup:{ type: String, enum: ['middleschool', 'highschool' , 'university', 'postgraduate'], default: 'university' }, // 年龄段
+      grade:{ type: String, enum: ['middleschool', 'highschool' , 'university', 'postgraduate'], default: 'university' }, // 年龄段
+      ageGroup:{ type: String, default: '25以上' }, // 年龄段
       sex: { type: String, default: '' },  // 性别
       address: { type: String, default: '' }, // 地址
       phone: { type: String, default: '' }, // 电话号码

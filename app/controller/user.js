@@ -14,10 +14,10 @@ const { cipher, decipher } = require('../extend/crypto')
 const fs = require('fs-extra')
 const path = require('path')
 class userController extends Controller {
-
   async create() {
     const { ctx, config } = this
     const body = ctx.request.body
+    console.log(body, 'dasdsa')
     const data = await ctx.service.user.create(body)
     ctx.body = getResponseBody(data)
   }
@@ -28,7 +28,6 @@ class userController extends Controller {
     const data = await ctx.service.user.find(body)
     ctx.body = getResponseBody(data)
   }
-
 
   async register() {
     const { ctx, config } = this

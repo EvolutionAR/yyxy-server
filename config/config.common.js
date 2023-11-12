@@ -37,7 +37,7 @@ module.exports = appInfo => {
       authorizationTime: 0
     },
     enable: true, // 控制中间件是否开启
-    ignore: ['/api/user', '/api/packages', '/api/resource'] // 设置符合某些规则的请求不经过这个中间件。
+    ignore: ['/api/packages', '/api/resource'] // 设置符合某些规则的请求不经过这个中间件。
   }
   console.log(config.publicPath)
   config.loginMiddleware = {
@@ -58,6 +58,7 @@ module.exports = appInfo => {
       'http://localhost:8088',
       'http://127.0.0.1:3005',
       'http://127.0.0.1:10010',
+      'http://localhost:8088',
       'https://fuxi.haizhi.com',
       'http://123.126.105.6',
       'http://dmc.haizhi.com',

@@ -60,8 +60,8 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "EGG_SERVER_ENV=dev egg-scripts start --daemon --title=egg-server-seatom-server",
-    "stop": "EGG_SERVER_ENV=dev egg-scripts stop --title=egg-server-seatom-server",
+    "start": "EGG_SERVER_ENV=prod egg-scripts start  --title=egg-server-seatom-server",
+    "stop": "EGG_SERVER_ENV=prod egg-scripts stop --title=egg-server-seatom-server",
     "start-win": "egg-scripts start --env=win --title=egg-server-seatom-server-win --sticky",
     "stop-win": "egg-scripts stop  --env=win  --title=egg-server-seatom-server-win",
     "restart-prod": "sh ./shell/restart-prod.sh",

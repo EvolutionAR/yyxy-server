@@ -8,15 +8,10 @@ module.exports = appInfo => {
   commonConfig['security']['domainWhiteList'].push(HttpPageURL)
   commonConfig['mongoose'] = {
     client: {
-      url: 'mongodb://127.0.0.1:27777/seatom-prod', // 数据库内网ip地址
+      url: 'mongodb://127.0.0.1:27017/seatom-prod', // 数据库内网ip地址
       options: {
         useUnifiedTopology: true,
-        useCreateIndex: true,
-        auth: {
-          authSource: 'admin'
-        },
-        user: 'root',
-        pass: 'haizhimongo'
+        useCreateIndex: true
       }
     }
   }

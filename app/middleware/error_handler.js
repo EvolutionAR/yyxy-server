@@ -8,22 +8,22 @@ const JSSM4 = require('../extend/src/index')
 module.exports = options => {
   return async function errorHandler(ctx, next) {
     try {
-      const filePath = path.join(__dirname, '..', '..', 'licence.txt')
-      const data = await fs.readFileSync(filePath, 'utf-8')
-      const decipherData = decipher(data).split('&&')[0]
-      // const decipherData = decipher(data)
-      const days = parseInt(decipherData)
-      const expdate = getExpdate(days)
-      if (days <= 0) {
-        let go = -days
-        ctx.body = getResponseBody(
-          { authorizationDays: days, expdate },
-          false,
-          `产品授权已经过期${go}天`,
-          455
-        )
-        return
-      }
+      // const filePath = path.join(__dirname, '..', '..', 'licence.txt')
+      // const data = await fs.readFileSync(filePath, 'utf-8')
+      // const decipherData = decipher(data).split('&&')[0]
+      // // const decipherData = decipher(data)
+      // const days = parseInt(decipherData)
+      // const expdate = getExpdate(days)
+      // if (days <= 0) {
+      //   let go = -days
+      //   ctx.body = getResponseBody(
+      //     { authorizationDays: days, expdate },
+      //     false,
+      //     `产品授权已经过期${go}天`,
+      //     455
+      //   )
+      //   return
+      // }
       await next()
       // console.log(cipher(`900&&123.126.105.33`),'wwww')
     } catch (err) {

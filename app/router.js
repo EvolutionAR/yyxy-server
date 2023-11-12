@@ -21,6 +21,6 @@ module.exports = app => {
   router.post(publicPath + '/api/user', controller.user.index)
   router.post(publicPath + '/api/user/create', controller.user.create)
   router.post(publicPath + '/api/user/register', controller.user.register)
-  
+
   /************ 用户信息-end ************/
 }

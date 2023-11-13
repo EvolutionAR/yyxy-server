@@ -3,14 +3,16 @@ module.exports = app => {
   const Schema = mongoose.Schema
   const { getDate } = require('../extend/utils')
   const { randomId } = require('../extend/utils')
-  const ExamSchema = new Schema(
+  const LogSchema = new Schema(
     {
       id: { type: Number, default: () => randomId() }, // 学号
       studentId: { type: String }, // 学号
-      name: { type: String, default: '' }, // 名字
-      examLevel: { type: String, default: '' },
-      score: { type: Number },
-      comment: { type: String, default: '' },
+      examId: { type: String, default: '' }, // 考试id
+      content: { type: String, default: '' }, // 操作日志
+      filePath: { type: String, default: '' }, // 语音文件地址
+      errorType: { type: String, default: '' }, // 错误类型
+      errorDetails: { type: String, default: '' }, // 错误详情
+      deductPoints: { type: Number }, // 扣分
       createdAt: { type: String }, // 创建时间
       updatedAt: { type: String } // 更新时间
     },
@@ -18,5 +20,5 @@ module.exports = app => {
       timestamps: { currentTime: () => getDate() }
     }
   )
-  return mongoose.model('Exam', ExamSchema)
+  return mongoose.model('Log', LogSchema)
 }

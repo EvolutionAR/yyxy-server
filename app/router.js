@@ -20,7 +20,22 @@ module.exports = app => {
   /************ 用户信息-start ************/
   router.post(publicPath + '/api/user', controller.user.index)
   router.post(publicPath + '/api/user/create', controller.user.create)
-  router.post(publicPath + '/api/user/register', controller.user.register)
+  router.post(publicPath + '/api/user/update', controller.user.update)
+  router.post(publicPath + '/api/user/delete', controller.user.delete)
 
   /************ 用户信息-end ************/
+  /************ 考试信息-start ************/
+  router.post(publicPath + '/api/exam', controller.exam.index)
+  router.post(publicPath + '/api/exam/create', controller.exam.create)
+  router.post(publicPath + '/api/exam/update', controller.exam.update)
+  router.post(publicPath + '/api/exam/delete', controller.exam.delete)
+
+  /************ 考试信息-end ************/
+  /************ 日志信息-start ************/
+  router.post(publicPath + '/api/log', controller.log.index)
+  router.post(publicPath + '/api/log/create', controller.log.create)
+  router.post(publicPath + '/api/log/update', controller.log.update)
+  router.post(publicPath + '/api/log/delete', controller.log.delete)
+
+  /************ 日志信息-end ************/
 }

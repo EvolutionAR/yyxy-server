@@ -281,7 +281,7 @@ module.exports = appInfo => {
     enableSecurity: false,
     // enableValidate: true,
     routerMap: false,
-    enable: true
+    enable: false
   }
 
   return {

@@ -15,51 +15,20 @@ module.exports = appInfo => {
   commonConfig['security']['domainWhiteList'].push(HttpPageURL)
   commonConfig['mongoose'] = {
     client: {
-      url: 'mongodb://127.0.0.1:27017/seatom-prev',
-      //   auth: {
-      //     authSource: 'admin'
-      //   },
+      url: 'mongodb://127.0.0.1:27017/yyxy',
       options: {
         useUnifiedTopology: true,
         useCreateIndex: true
       }
     }
   }
-  commonConfig['gdLogin'] =
-    'https://yzh-test.gdgov.cn/api/aladdin-user/user-info' //对接数字广东登录接口
-  commonConfig['gdMenu'] =
-    'https://yzh-test.gdgov.cn/yzh-empower/api/aladdin-system/menu/buttons' //对接数字广东权限接口
-
-  commonConfig['applist'] =
-    'https://yzh-test.gdgov.cn/yzh-empower/enabler/myapp/list'
-  commonConfig['capacitylist'] =
-    'https://yzh-test.gdgov.cn/yzh-empower/enabler/capacity/zblist' // 指标列表接口
-  commonConfig['capacityzb'] =
-    'https://yzh-test.gdgov.cn/yzh-empower/enabler/capacity/info/zb'
-  commonConfig['capacityapi'] =
-    'https://yzh-test.gdgov.cn/yzh-empower/enabler/capacity/info/api'
-  commonConfig['capacityzt'] =
-    'https://yzh-test.gdgov.cn/yzh-empower/enabler/capacity/info/zt'
-  commonConfig['getEnv'] =
-    'https://yzh-test.gdgov.cn/yzh-empower/enabler/env/info'
-
-  commonConfig['getEnvId'] =
-    'https://yzh-test.gdgov.cn/api/aladdin-system/platform-configuration/info' // 获取当前环境信息接口
-  commonConfig['getpassIdInfo'] =
-    'https://yzh-test.gdgov.cn/yzh-empower/enabler/app/info/passId' // 获取应用详情
-  commonConfig['exchangeToken'] =
-    'https://yzh-test.gdgov.cn/api/aladdin-auth/oauth/exchange-token' // 获取应用详情
-
-  commonConfig['clientid'] =
-    'dG9vbHMtaHprc2g6ODc5YTdkYTgtMzNiYS0wOTA5LWZmMGQtMDQ4MTUzZWIzMjM4'
-
   commonConfig['serverIp'] = '192.168.4.108'
   commonConfig['webServerIp'] = pageURL
   commonConfig['intranetIp'] = '127.0.0.1'
   commonConfig['cluster'] = {
     listen: {
       path: '',
-      port: 7001,
+      port: 7777,
       hostname: '0.0.0.0'
     }
   }

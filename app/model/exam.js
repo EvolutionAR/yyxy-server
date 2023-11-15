@@ -6,7 +6,7 @@ module.exports = app => {
   const ExamSchema = new Schema(
     {
       id: { type: Number, default: () => randomId() }, // 学号
-      studentId: { type: String }, // 学号
+      studentId: { type: String, required: true }, // 学号
       name: { type: String, default: '' }, // 名字
       examLevel: { type: String, default: '' },
       score: { type: Number },

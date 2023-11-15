@@ -6,8 +6,8 @@ module.exports = app => {
   const LogSchema = new Schema(
     {
       id: { type: Number, default: () => randomId() }, // 学号
-      studentId: { type: String }, // 学号
-      examId: { type: String, default: '' }, // 考试id
+      studentId: { type: String, required: true }, // 学号
+      examId: { type: Number, required: true }, // 考试id
       content: { type: String, default: '' }, // 操作日志
       filePath: { type: String, default: '' }, // 语音文件地址
       errorType: { type: String, default: '' }, // 错误类型
